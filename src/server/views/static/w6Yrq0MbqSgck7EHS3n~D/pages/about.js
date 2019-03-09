@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"2yOR":function(n,t,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/about",function(){var n=u("TaPz");return{page:n.default||n}}])},TaPz:function(n,t,u){"use strict";u.r(t);var a=u("ERkP"),e=u.n(a);t.default=function(){return e.a.createElement("div",null)}}},[["2yOR",1,0]]]);

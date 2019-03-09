@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
-    "start": "next build && ts-node -r tsconfig-paths/register src/main.ts",
+    "start": "next build ./src/next && ts-node -r tsconfig-paths/register src/server/main.ts",
     "start:dev": "nodemon",
     "start:debug": "nodemon --config nodemon-debug.json",
     "prestart:prod": "rimraf dist && npm run build",
@@ -18,14 +18,16 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "nextbuild": "next build",
-    "nextstart": "next start"
+    "nextbuild": "next build ./src/next",
+    "nextstart": "next start",
+    "dev": "next ./src/next"
   },
   "dependencies": {
     "@nestjs/common": "^5.4.0",
     "@nestjs/core": "^5.4.0",
     "@zeit/next-sass": "^1.0.1",
     "@zeit/next-typescript": "^1.1.1",
+    "axios": "^0.18.0",
     "next": "^8.0.3",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
@@ -33,7 +35,7 @@
     "react-dom": "^16.8.4",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
-    "rxjs": "^6.2.2",
+    "rxjs": "^6.4.0",
     "typescript": "^3.0.1"
   },
   "devDependencies": {

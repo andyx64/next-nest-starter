@@ -4,9 +4,9 @@ const withTypescript = require('@zeit/next-typescript')
 
 module.exports = withTM(withSass(withTypescript({
   target: "serverless",
-  distDir: "./src/next",
+  distDir: "../server/views",
   transpileModules: ['react-bulma-components'],
   sassLoaderOptions: {
-    includePaths: ["./pages/styles"]
+    includePaths: ["./src/next/styles/"]
   },
 })));
